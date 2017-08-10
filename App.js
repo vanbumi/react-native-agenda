@@ -6,27 +6,40 @@ import {
   TextInput,
   ScrollView,
   TouchableOpacity
-
 } from 'react-native';
+import Note from './app/components/Note'
 
 export default class App extends React.Component {
+
+  state = {
+    noteArray: [{'date': 'testdate', 'note': 'testnote 1'}],
+    noteText: ''
+  }
+
   render() {
+
+    let notes = this.state.noteArray.map((val, key) => {
+      return <Note key={key} keyval={key} val={val} deleteMethod={ () => this.deleteNote(key) } />
+    });
+
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.headerText}>Hello Fest!</Text>
+          <Text style={styles.headerText}>Agenda Ku</Text>
         </View>
 
         <ScrollView style={styles.scrollContainer}>
-          <Text>tesst</Text>
+          {notes}
         </ScrollView>
 
         <View style={styles.footer}>
-          <TouchableOpacity style={styles.addButton}>
+          <TouchableOpacity onPress={this.addNote.bind(this)} style={styles.addButton}>
             <Text style={styles.addButtonText}>+</Text>
           </TouchableOpacity>
 
           <TextInput style={styles.textInput}
+            onChangeText={(noteText) => this.setState({noteText})}
+            value={this.state.noteText}
             placeholder='> Catatan...'
             placeholderTextColor='white'
             underlineColorAndroid='transparent'
@@ -36,7 +49,27 @@ export default class App extends React.Component {
       </View>
     );
   }
+
+  addNote() {
+    //alert(this.state.noteText); 
+    const d = new Date();
+    this.state.noteArray.push( {
+      'date': d.getDate() + 
+      "/" + (d.getMonth() + 1) + 
+      "/" + d.getFullYear(), 
+      'note': this.state.noteText} );
+    this.setState({ noteArray: this.state.noteArray })
+    this.setState({ noteText: '' }); 
+  }
+
+  deleteNote(key) {
+    this.state.noteArray.splice(key, 1);
+    this.setState({ noteArray: this.state.noteArray });
+  }
+
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
