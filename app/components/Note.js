@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#a6c0f4',
+    backgroundColor: '#f4adca',
     padding: 10,
     top: 10,
     bottom: 10,
@@ -51,6 +51,6 @@ const styles = StyleSheet.create({
   noteDeleteText: {
     color: 'white',
     fontSize: 20,
-    fontWeight: '500'
+    //fontWeight: '500'
   }
 });
