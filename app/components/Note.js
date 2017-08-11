@@ -6,12 +6,12 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-export default class App extends React.Component {
+export default class Note extends React.Component {
   render() {
     return (
-      <View style={styles.note}>
-        <Text>{this.props.val.date}</Text>
-        <Text>{this.props.val.note}</Text>
+      <View key={this.props.keyval} style={styles.note}>
+        <Text style={styles.noteText}>{this.props.val.date}</Text>
+        <Text style={styles.noteText}>{this.props.val.note}</Text>
 
         <TouchableOpacity
           style={styles.noteDelete} 
@@ -35,19 +35,22 @@ const styles = StyleSheet.create({
   noteText: {
     paddingLeft: 20,
     borderLeftWidth: 10,
-    borderLeftColor: '#E91E63'
+    borderLeftColor: '#a6c0f4'
   },
   noteDelete: {
     position: 'absolute',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#2980b9',
+    backgroundColor: '#a6c0f4',
     padding: 10,
     top: 10,
     bottom: 10,
-    right: 10
+    right: 10,
+    borderRadius: 20
   },
   noteDeleteText: {
-    color: 'white'
+    color: 'white',
+    fontSize: 20,
+    fontWeight: '500'
   }
 });

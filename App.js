@@ -7,25 +7,30 @@ import {
   ScrollView,
   TouchableOpacity
 } from 'react-native';
-import Note from './app/components/Note'
+import Note from './app/components/Note';
 
 export default class App extends React.Component {
 
   state = {
-    noteArray: [{'date': 'testdate', 'note': 'testnote 1'}],
+    noteArray: [{'date': 'Testdate', 'note': 'Catatan penting 1'}],
     noteText: ''
   }
 
   render() {
 
     let notes = this.state.noteArray.map((val, key) => {
-      return <Note key={key} keyval={key} val={val} deleteMethod={ () => this.deleteNote(key) } />
+      return <Note 
+          key={key} 
+          keyval={key} 
+          val={val} 
+          deleteMethod={ () => this.deleteNote(key) } 
+        />
     });
 
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.headerText}>Agenda Ku</Text>
+          <Text style={styles.headerText}>Agenda Hari Ini</Text>
         </View>
 
         <ScrollView style={styles.scrollContainer}>
@@ -40,7 +45,7 @@ export default class App extends React.Component {
           <TextInput style={styles.textInput}
             onChangeText={(noteText) => this.setState({noteText})}
             value={this.state.noteText}
-            placeholder='> Catatan...'
+            placeholder='> Catatan penting...'
             placeholderTextColor='white'
             underlineColorAndroid='transparent'
           >
@@ -52,14 +57,16 @@ export default class App extends React.Component {
 
   addNote() {
     //alert(this.state.noteText); 
-    const d = new Date();
-    this.state.noteArray.push( {
-      'date': d.getDate() + 
-      "/" + (d.getMonth() + 1) + 
-      "/" + d.getFullYear(), 
-      'note': this.state.noteText} );
-    this.setState({ noteArray: this.state.noteArray })
-    this.setState({ noteText: '' }); 
+    if (this.state.noteText) {
+      var d = new Date();
+      this.state.noteArray.push( {
+        'date': d.getDate() + 
+        "/" + (d.getMonth() + 1) + 
+        "/" + d.getFullYear(), 
+        'note': this.state.noteText} );
+      this.setState({ noteArray: this.state.noteArray })
+      this.setState({ noteText: '' }); 
+    }
   }
 
   deleteNote(key) {
@@ -69,7 +76,7 @@ export default class App extends React.Component {
 
 }
 
-
+// Bagian Style
 
 const styles = StyleSheet.create({
   container: {
@@ -77,7 +84,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    backgroundColor: '#E91E63',
+    backgroundColor: '#3B5998',
     justifyContent: 'center',
     alignItems: 'center',
     borderBottomWidth: 10,
@@ -102,10 +109,11 @@ const styles = StyleSheet.create({
     right: 0,
   },
   addButton: {
-    backgroundColor: '#E91E64',
+    backgroundColor: '#3B5998',
     width: 90,
     height: 90,
     borderRadius: 50,
+    borderWidth: 1,
     borderColor: '#ccc',
     alignItems: 'center',
     justifyContent: 'center',
@@ -115,15 +123,15 @@ const styles = StyleSheet.create({
   },
   addButtonText: {
     color: '#fff',
-    fontSize: 24
+    fontSize: 50
   },
   textInput: {
     alignSelf: 'stretch',
     color: '#fff',
     padding: 15,
-    paddingTop: 46,
-    backgroundColor: '#252525',
-    borderTopWidth: 22,
+    paddingTop: 40,
+    backgroundColor: '#3B5998',
+    borderTopWidth: 20,
     borderTopColor: '#ededed'
   }
 
