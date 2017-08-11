@@ -1,5 +1,7 @@
 # React Native Agenda (CRNA)
 
+![agenda](http://res.cloudinary.com/medioxtra/image/upload/c_scale,h_611,w_350/v1502435557/agenda/agenda.jpg)
+
 ### Create App
 
     create-react-native-app agenda
