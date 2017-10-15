@@ -13,7 +13,9 @@ Lebih lengkap baca disini: [https://github.com/react-community/create-react-nati
 
 2. **Instal create-react-native-app** di computer secara Global (cukup 1 x ).
 
-		npm install -g create-react-native-app
+  		npm install -g create-react-native-app
+
+atau bila menggunakan yarn
 
     	yarn global add create-react-native-app
 
