@@ -315,6 +315,22 @@ Menjadi:
       this.setState({ noteArray: this.state.noteArray });
     }
 
+### Jalankan App
+
+	npm start
+
+atau
+
+	yarn start
+
+Scan dengan Expo App dari HP anda		
+
 ### Selesai
 
-Coba masukan beberapa catatan dan hapus kembali.
+Pada HP anda Coba App dengan memasukan beberapa catatan dan hapus kembali.
+
+---
+
+Untuk keperluan Training lebih lanjut hubungi: 
+Dyo Bumi WA: 0878 788 669 43
+
