@@ -2,6 +2,21 @@
 
 ![agenda](http://res.cloudinary.com/medioxtra/image/upload/c_scale,h_611,w_350/v1502435557/agenda/agenda.jpg)
 
+## Get Start
+
+**Create React Native App** is the easiest way to start building a new React Native application. Tanpa XCode dan Android Studio, yang membutuhkan RAM besar (Minimu 8Gb).
+Lebih lengkap baca disini: [https://github.com/react-community/create-react-native-app](https://github.com/react-community/create-react-native-app).
+
+### Step-step
+
+1. **Install Node**, download Node disini : [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+
+2. **Instal create-react-native-app** di computer secara Global (cukup 1 x ).
+
+		npm install -g create-react-native-app
+
+    	yarn global add create-react-native-app
+
 ### Create App
 
     create-react-native-app agenda
