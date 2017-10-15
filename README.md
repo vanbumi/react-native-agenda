@@ -17,7 +17,7 @@ Lebih lengkap baca disini: [https://github.com/react-community/create-react-nati
 
 atau bila menggunakan yarn
 
-    	yarn global add create-react-native-app
+    yarn global add create-react-native-app
 
 ### Create App
 
