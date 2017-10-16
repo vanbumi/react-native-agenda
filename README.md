@@ -29,9 +29,13 @@ Buka file agenda:
 
 Buka file agenda dengan text editor, contoh Visual Code Studio.     
 
-### Create folder app & folder components
+### Create folder app 
 
-    e:\>workspace\app\components 
+    root > app
+
+### Create folder components dibawah folder app
+
+    root > app > components
 
 ### import components from react-native library 
 
