@@ -7,7 +7,13 @@
 **Create React Native App** is the easiest way to start building a new React Native application. Tanpa XCode dan Android Studio, yang membutuhkan RAM besar (Minimu 8Gb).
 Lebih lengkap baca disini: [https://github.com/react-community/create-react-native-app](https://github.com/react-community/create-react-native-app).
 
-### Step-step
+### Clone dan Install
+
+  workspace-anda $> git clone ...
+
+  workspace-anda $> npm install atau yarn install
+
+### Step bye create App Agenda.
 
 1. Install **Expo App** di Android anda.
 
