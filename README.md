@@ -23,6 +23,12 @@ atau bila menggunakan yarn
 
     create-react-native-app agenda
 
+Buka file agenda:
+
+    cd agenda
+
+Buka file agenda dengan text editor, contoh Visual Code Studio.     
+
 ### Create folder app & folder components
 
     e:\>workspace\app\components 
