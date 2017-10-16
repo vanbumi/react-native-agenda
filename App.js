@@ -39,7 +39,7 @@ export default class App extends React.Component {
           <ScrollView style={styles.scrollContainer}>
             {notes}
           </ScrollView>
-
+          
           <View style={styles.footer}>
             <TouchableOpacity onPress={this.addNote.bind(this)} style={styles.addButton}>
               <Text style={styles.addButtonText}>+</Text>

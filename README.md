@@ -11,9 +11,11 @@ Lebih lengkap baca disini: [https://github.com/react-community/create-react-nati
 
 1. Install **Expo App** di Android anda.
 
-2. **Install Node**, download Node disini : [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+2. Install Expo Desktop di PC anda.
 
-3. **Instal create-react-native-app** di computer secara Global (cukup 1 x ).
+3. **Install Node**, download Node disini : [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+
+4. **Instal create-react-native-app** di computer secara Global (cukup 1 x ).
 
   		npm install -g create-react-native-app
 
