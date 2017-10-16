@@ -9,15 +9,17 @@ Lebih lengkap baca disini: [https://github.com/react-community/create-react-nati
 
 ### Step-step
 
-1. **Install Node**, download Node disini : [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+1. Install **Expo App** di Android anda.
 
-2. **Instal create-react-native-app** di computer secara Global (cukup 1 x ).
+2. **Install Node**, download Node disini : [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+
+3. **Instal create-react-native-app** di computer secara Global (cukup 1 x ).
 
   		npm install -g create-react-native-app
 
-atau bila menggunakan yarn
+    atau bila menggunakan yarn
 
-    yarn global add create-react-native-app
+        yarn global add create-react-native-app
 
 ### Create App
 
@@ -27,7 +29,15 @@ Buka file agenda:
 
     cd agenda
 
-Buka file agenda dengan text editor, contoh Visual Code Studio.     
+Jalankan dengan:
+
+    npm start atau yarn start     
+
+Scan dengan expo App anda.
+
+Buka file agenda dengan text editor, contoh Visual Code Studio. 
+
+### Buka file App.js
 
 ### Create folder app 
 
@@ -37,7 +47,7 @@ Buka file agenda dengan text editor, contoh Visual Code Studio.
 
     root > app > components
 
-### import components from react-native library 
+### import components from react-native library pada App.js
 
     TextInput, ScrollView, TouchableOpacity 
 
